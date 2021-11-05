@@ -7,10 +7,10 @@ First create a account in [replit.com](https://replit.com/signup?from=landing) <
 4. Create a Python file name as **keep_alive.py** ![file creating](https://user-images.githubusercontent.com/91129706/140533171-bdee43e3-0f30-4c72-a33c-b35207af6714.png)
 5. Paste the code from the **keep_alive.py** file in the repl ![keep_alive](https://user-images.githubusercontent.com/91129706/140533410-25fa1084-f27f-4747-82aa-538edf0925be.png)
 
-And paste your **Bot token in the **main.py file last line** and run the code.
+And then paste your **Bot token** in the **main.py last line** and run the code.
 
-And now you have a working discord **MOD BOT**
+Now you have a working Discord **MOD BOT**
 
-If this helped you do follow me i am going uplod more Discord bot projects
+If this helped you do follow me i will upload more project on **Discord.Bots**
 
-**Thank You 🎉**
+**Thank Y:o2:u 
