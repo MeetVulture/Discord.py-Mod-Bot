@@ -13,4 +13,4 @@ Now you have a working Discord **MOD BOT**
 
 If this helped you do follow me i will upload more project on **Discord.Bots**
 
-**Thank Y:o2:u 
+**Thank Y:o2:u**
