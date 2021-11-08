@@ -11,9 +11,51 @@ from keep_alive import keep_alive
 from discord.ext import commands
 
 
+def get_prefix(client, message):
+  with open('prefixes.json', 'r') as f:
+    prefixes = json.load(f)
+
+  return prefixes[str(message.guild.id)]
 
 
-client = commands.Bot(command_prefix = 'TYPE YOUR OWN COMMAND PREFIX')
+client = commands.Bot(command_prefix = get_prefix)
+
+
+
+
+
+@client.event
+async def on_guild_join(guild):
+      with open ('prefixes.json', 'r') as f:
+            prefixes = json.load(f)
+ 
+      prefixes[str(guild.id)] = '.'
+
+      with open ('prefixes.json', 'w') as f:
+            json.dump(prefixes, f, indent=4)
+
+@client.event
+async def on_guild_remove(guild):
+      with open ('prefixes.json', 'r') as f:
+            prefixes = json.load(f)
+
+            prefixes.pop(str(guild.id))
+
+            with open ('prefixes.json', 'w') as f:
+                  json.dump(prefixes, f, indent=4)
+
+@client.command()
+async def changeprefix(ctx, prefix):
+      with open ('prefixes.json', 'r') as f:
+            prefixes = json.load(f)
+
+      prefixes[str(ctx.guild.id)] = prefix
+
+
+      with open ('prefixes.json', 'w') as f:
+            json.dump(prefixes, f, indent=4)
+
+      await ctx.send(f'Prefix changed to: {prefix}')
 
 
 
